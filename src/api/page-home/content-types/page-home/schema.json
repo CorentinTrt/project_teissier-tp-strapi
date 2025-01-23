@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_homes",
+  "info": {
+    "singularName": "page-home",
+    "pluralName": "page-homes",
+    "displayName": "page-home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metadata": {
+      "type": "json"
+    },
+    "strings": {
+      "type": "json"
+    },
+    "uploads": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "realisations": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

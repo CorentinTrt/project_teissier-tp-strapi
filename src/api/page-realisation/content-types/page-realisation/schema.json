@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_realisations",
+  "info": {
+    "singularName": "page-realisation",
+    "pluralName": "page-realisations",
+    "displayName": "page-realisation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "metadata": {
+      "type": "json"
+    },
+    "strings": {
+      "type": "json"
+    }
+  }
+}
