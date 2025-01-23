@@ -10,9 +10,8 @@ export default ({ env }) => {
         default: {
           connector: "bookshelf",
           settings: {
-            client: "postgres",
-            host: `/cloudsql/${env("INSTANCE_CONNECTION_NAME")}`,
-            port: env.int("DB_PORT"),
+            client: "pg",
+            host: env("INSTANCE_UNIX_SOCKET"),
             database: env("DB_NAME"),
             user: env("DB_USER"),
             password: env("DB_PASS"),
