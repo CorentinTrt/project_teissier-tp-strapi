@@ -5,20 +5,13 @@ export default ({ env }) => {
 
   const connections = {
     postgres: {
-      defaultConnection: "default",
-      connections: {
-        default: {
-          connector: "bookshelf",
-          settings: {
-            client: "pg",
-            host: env("INSTANCE_UNIX_SOCKET"),
-            port: env("DB_PORT"),
-            database: env("DB_NAME"),
-            user: env("DB_USER"),
-            password: env("DB_PASS"),
-          },
-          options: {},
-        },
+      connection: {
+        host: env("INSTANCE_UNIX_SOCKET"),
+        port: env.int("DB_PORT"),
+        database: env("DB_NAME"),
+        user: env("DB_USER"),
+        password: env("DB_PASS"),
+        ssl: false,
       },
     },
     sqlite: {
