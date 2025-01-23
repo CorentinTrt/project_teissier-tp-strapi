@@ -3,6 +3,8 @@ import path from "path";
 export default ({ env }) => {
   const client = env("DATABASE_CLIENT", "sqlite");
 
+  console.log(env("INSTANCE_UNIX_SOCKET"));
+
   const connections = {
     postgres: {
       defaultConnection: "default",
