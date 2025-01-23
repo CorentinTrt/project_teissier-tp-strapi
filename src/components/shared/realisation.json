@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_realisations",
+  "info": {
+    "displayName": "realisation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "typeText": {
+      "type": "blocks"
+    },
+    "technicText": {
+      "type": "blocks"
+    },
+    "layout": {
+      "type": "integer"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pid": {
+      "type": "integer",
+      "min": 1
+    }
+  }
+}

@@ -23,6 +23,31 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRealisation extends Struct.ComponentSchema {
+  collectionName: 'components_shared_realisations';
+  info: {
+    description: '';
+    displayName: 'realisation';
+  };
+  attributes: {
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    layout: Schema.Attribute.Integer;
+    name: Schema.Attribute.String;
+    pid: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    technicText: Schema.Attribute.Blocks;
+    typeText: Schema.Attribute.Blocks;
+  };
+}
+
 export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
@@ -67,6 +92,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
+      'shared.realisation': SharedRealisation;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;

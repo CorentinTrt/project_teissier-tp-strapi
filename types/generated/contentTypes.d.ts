@@ -558,6 +558,35 @@ export interface ApiDataFooterDataFooter extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiDataRealisationDataRealisation
+  extends Struct.SingleTypeSchema {
+  collectionName: 'data_realisations';
+  info: {
+    displayName: 'data-realisation';
+    pluralName: 'data-realisations';
+    singularName: 'data-realisation';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'shared.realisation', true>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::data-realisation.data-realisation'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1201,6 +1230,7 @@ declare module '@strapi/strapi' {
       'api::category.category': ApiCategoryCategory;
       'api::data-contact.data-contact': ApiDataContactDataContact;
       'api::data-footer.data-footer': ApiDataFooterDataFooter;
+      'api::data-realisation.data-realisation': ApiDataRealisationDataRealisation;
       'api::global.global': ApiGlobalGlobal;
       'api::page-contact.page-contact': ApiPageContactPageContact;
       'api::page-home.page-home': ApiPageHomePageHome;

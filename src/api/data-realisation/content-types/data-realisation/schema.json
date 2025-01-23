@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "data_realisations",
+  "info": {
+    "singularName": "data-realisation",
+    "pluralName": "data-realisations",
+    "displayName": "data-realisation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.realisation"
+    }
+  }
+}
