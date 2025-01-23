@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "data_footers",
+  "info": {
+    "singularName": "data-footer",
+    "pluralName": "data-footers",
+    "displayName": "data-footer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "json"
+    }
+  }
+}
