@@ -43,8 +43,8 @@ export interface SharedRealisation extends Struct.ComponentSchema {
         },
         number
       >;
-    technicText: Schema.Attribute.Blocks;
-    typeText: Schema.Attribute.Blocks;
+    technicText: Schema.Attribute.Text;
+    typeText: Schema.Attribute.Text;
   };
 }
 

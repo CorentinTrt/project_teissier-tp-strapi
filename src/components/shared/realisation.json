@@ -9,12 +9,6 @@
     "name": {
       "type": "string"
     },
-    "typeText": {
-      "type": "blocks"
-    },
-    "technicText": {
-      "type": "blocks"
-    },
     "layout": {
       "type": "integer"
     },
@@ -32,6 +26,12 @@
     "pid": {
       "type": "integer",
       "min": 1
+    },
+    "typeText": {
+      "type": "text"
+    },
+    "technicText": {
+      "type": "text"
     }
   }
 }
