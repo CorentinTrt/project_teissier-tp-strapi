@@ -16,4 +16,6 @@ export default ({ env }) => {
       },
     };
   }
+
+  return {};
 };
