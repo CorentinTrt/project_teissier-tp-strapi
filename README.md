@@ -22,7 +22,7 @@ $ pnpm run build-docker
 # to build a docker image of the project
 ```
 
-## ⚙️Deployment
+## Deployment
 
 This project is deployed using Cloud Run and Cloud Build.
 
